@@ -1,9 +1,8 @@
-// Subclasse PessoaJuridica
 public class PessoaJuridica extends Pessoa {
     private String cnpj;
 
-    public PessoaJuridica(String nome, String cnpj) {
-        super(nome);
+    public PessoaJuridica(String nome, String endereco, String cnpj) {
+        super(nome, endereco);
         this.cnpj = cnpj;
     }
 
@@ -11,9 +10,12 @@ public class PessoaJuridica extends Pessoa {
         return cnpj;
     }
 
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
+    }
+
     @Override
-    public void exibirDados() {
-        System.out.println("Pessoa Jurídica: " + nome + " - CNPJ: " + cnpj);
+    public void exibirDocumentoPrincipal() {
+        System.out.println("CNPJ: " + cnpj);
     }
 }
-

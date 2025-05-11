@@ -1,9 +1,8 @@
-// Subclasse PessoaFisica
 public class PessoaFisica extends Pessoa {
     private String cpf;
 
-    public PessoaFisica(String nome, String cpf) {
-        super(nome);
+    public PessoaFisica(String nome, String endereco, String cpf) {
+        super(nome, endereco);
         this.cpf = cpf;
     }
 
@@ -11,8 +10,12 @@ public class PessoaFisica extends Pessoa {
         return cpf;
     }
 
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
     @Override
-    public void exibirDados() {
-        System.out.println("Pessoa Física: " + nome + " - CPF: " + cpf);
+    public void exibirDocumentoPrincipal() {
+        System.out.println("CPF: " + cpf);
     }
 }
